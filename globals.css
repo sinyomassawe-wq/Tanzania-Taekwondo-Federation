@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-green: #1EB53A;
+  --color-green-dark: #178f2e;
+  --color-blue: #00A3DD;
+  --color-navy: #0B2A4A;
+  --color-gold: #FCD116;
+  --color-gold-dark: #e5bc0f;
+  --color-black: #111111;
+  --color-gray-bg: #F5F7FA;
+}
+
+body {
+  color: var(--color-navy);
+  background-color: #FFFFFF;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+/* TTF Flag Stripe Divider Motif */
+.flag-stripe-divider {
+  height: 6px;
+  background: linear-gradient(
+    90deg,
+    #1EB53A 0%,
+    #1EB53A 35%,
+    #FCD116 35%,
+    #FCD116 40%,
+    #111111 40%,
+    #111111 60%,
+    #FCD116 60%,
+    #FCD116 65%,
+    #00A3DD 65%,
+    #00A3DD 100%
+  );
+}
+
+.flag-stripe-accent {
+  position: relative;
+}
+
+.flag-stripe-accent::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  margin-top: 8px;
+  background: linear-gradient(90deg, #1EB53A 0%, #FCD116 50%, #00A3DD 100%);
+  border-radius: 2px;
+}
+
+/* Print styling for Official Membership Card */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  .print-card-section,
+  .print-card-section * {
+    visibility: visible;
+  }
+  .print-card-section {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  .no-print {
+    display: none !important;
+  }
+}

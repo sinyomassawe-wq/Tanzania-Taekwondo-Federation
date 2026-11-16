@@ -1,0 +1,38 @@
+{
+  "name": "ttf-website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Official Website of the Tanzania Taekwondo Federation (TTF)",
+  "scripts": {
+    "dev": "node ./node_modules/next/dist/bin/next dev",
+    "build": "node ./node_modules/next/dist/bin/next build",
+    "start": "node ./node_modules/next/dist/bin/next start",
+    "lint": "node ./node_modules/next/dist/bin/next lint",
+    "seed": "node scripts/seed.mjs",
+    "seed:wipe": "node scripts/seed.mjs --wipe",
+    "test": "node scripts/test.mjs"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "jsonwebtoken": "^9.0.2",
+    "lucide-react": "^0.453.0",
+    "next": "^14.2.23",
+    "nodemailer": "^6.9.15",
+    "qrcode": "^1.5.4",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
+    "@types/jsonwebtoken": "^9.0.7",
+    "@types/node": "^20.17.0",
+    "@types/nodemailer": "^6.4.16",
+    "@types/qrcode": "^1.5.5",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.47",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.6.3"
+  }
+}
